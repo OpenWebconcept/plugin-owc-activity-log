@@ -1,0 +1,409 @@
+# Dutch translation of OWC Activity Log
+# Copyright (C) 2026 Mike van den Hoek
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: OWC Activity Log 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/owc-activity-log\n"
+"POT-Creation-Date: 2026-03-12T00:00:00+00:00\n"
+"PO-Revision-Date: 2026-03-12T00:00:00+00:00\n"
+"Last-Translator: Mike van den Hoek\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Manual\n"
+"X-Domain: owc-activity-log\n"
+
+#. Plugin Name of the plugin
+msgid "OWC Activity Log"
+msgstr "OWC Activiteitenlog"
+
+#. Description of the plugin
+msgid "Tracks all WordPress activity such as posts, meta, options, users, taxonomy, comments, plugins, themes and more."
+msgstr "Registreert alle WordPress-activiteit zoals berichten, meta, opties, gebruikers, taxonomieën, reacties, plugins, thema's en meer."
+
+#. Author of the plugin
+msgid "Mike van den Hoek"
+msgstr "Mike van den Hoek"
+
+#: src/Providers/AdminServiceProvider.php
+msgid "Activity Tracker"
+msgstr "Activiteitstracker"
+
+#: src/Providers/AdminServiceProvider.php
+#: src/Admin/ActivityLogTable.php
+msgid "Activity Log"
+msgstr "Activiteitenlog"
+
+#: src/Providers/AdminServiceProvider.php
+#: src/Views/admin/settings-page.php
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/Admin/ActivityLogTable.php
+msgid "Date / time"
+msgstr "Datum / tijd"
+
+#: src/Admin/ActivityLogTable.php
+#: src/Views/admin/partials/filters.php
+msgid "Group"
+msgstr "Groep"
+
+#: src/Admin/ActivityLogTable.php
+msgid "Action"
+msgstr "Actie"
+
+#: src/Admin/ActivityLogTable.php
+#: src/Views/admin/log-page.php
+msgid "Message"
+msgstr "Bericht"
+
+#: src/Admin/ActivityLogTable.php
+msgid "User"
+msgstr "Gebruiker"
+
+#: src/Admin/ActivityLogTable.php
+#: src/Views/admin/partials/filters.php
+msgid "Object type"
+msgstr "Objecttype"
+
+#: src/Admin/ActivityLogTable.php
+msgid "IP"
+msgstr "IP-adres"
+
+#: src/Admin/ActivityLogTable.php
+#: src/Views/admin/log-page.php
+msgid "Search messages"
+msgstr "Berichten zoeken"
+
+#: src/Admin/ActivityLogTable.php
+#: src/Views/admin/log-page.php
+msgid "Details"
+msgstr "Details"
+
+#: src/Views/admin/log-page.php
+msgid "Hide details"
+msgstr "Details verbergen"
+
+#: src/Controllers/AdminPageController.php
+msgid "You do not have permission to view this page."
+msgstr "U heeft geen toestemming om deze pagina te bekijken."
+
+#: src/Controllers/AdminPageController.php
+msgid "Settings saved."
+msgstr "Instellingen opgeslagen."
+
+#: src/Views/admin/partials/filters.php
+msgid "— All groups —"
+msgstr "— Alle groepen —"
+
+#: src/Views/admin/partials/filters.php
+msgid "— All object types —"
+msgstr "— Alle objecttypen —"
+
+#: src/Views/admin/partials/filters.php
+msgid "From"
+msgstr "Van"
+
+#: src/Views/admin/partials/filters.php
+msgid "To"
+msgstr "Tot"
+
+#: src/Views/admin/partials/filters.php
+msgid "Filter"
+msgstr "Filteren"
+
+#: src/Views/admin/partials/filters.php
+msgid "Reset"
+msgstr "Resetten"
+
+#: src/Views/admin/settings-page.php
+msgid "Log IP addresses"
+msgstr "IP-adressen loggen"
+
+#: src/Views/admin/settings-page.php
+msgid "Enable IP address logging"
+msgstr "IP-adresregistratie inschakelen"
+
+#: src/Views/admin/settings-page.php
+msgid "When enabled, the IP address of the user is stored with each log entry."
+msgstr "Indien ingeschakeld wordt het IP-adres van de gebruiker bij elke logregel opgeslagen."
+
+#: src/Views/admin/settings-page.php
+msgid "Log retention (days)"
+msgstr "Logbehoud (dagen)"
+
+#: src/Views/admin/settings-page.php
+msgid "Log entries older than this number of days are deleted automatically."
+msgstr "Logregels ouder dan dit aantal dagen worden automatisch verwijderd."
+
+#: src/Views/admin/settings-page.php
+msgid "Tracked groups"
+msgstr "Bijgehouden groepen"
+
+#: src/Views/admin/settings-page.php
+msgid "Uncheck groups to stop tracking them."
+msgstr "Schakel groepen uit om ze niet meer bij te houden."
+
+#: src/Views/admin/settings-page.php
+msgid "Ignored meta keys"
+msgstr "Genegeerde meta-sleutels"
+
+#: src/Views/admin/settings-page.php
+msgid "One key per line. Wildcards supported: _my_prefix_*"
+msgstr "Één sleutel per regel. Wildcards ondersteund: _mijn_prefix_*"
+
+#: src/Views/admin/settings-page.php
+msgid "Ignored option names"
+msgstr "Genegeerde optienamen"
+
+#: src/Views/admin/settings-page.php
+msgid "One option name per line. Wildcards supported: my_plugin_*"
+msgstr "Één optienaam per regel. Wildcards ondersteund: mijn_plugin_*"
+
+#: src/Listeners/PostListener.php
+#. translators: 1: post title, 2: post type, 3: verb
+msgid "Post \"%1$s\" (%2$s) was %3$s."
+msgstr "Bericht \"%1$s\" (%2$s) is %3$s."
+
+#: src/Listeners/PostListener.php
+#. translators: 1: post title, 2: post type
+msgid "Post \"%1$s\" (%2$s) fields changed."
+msgstr "Velden van bericht \"%1$s\" (%2$s) zijn gewijzigd."
+
+#: src/Listeners/PostListener.php
+#. translators: 1: post title, 2: post type
+msgid "Post \"%1$s\" (%2$s) moved to trash."
+msgstr "Bericht \"%1$s\" (%2$s) verplaatst naar prullenbak."
+
+#: src/Listeners/PostListener.php
+#. translators: 1: post title, 2: post type
+msgid "Post \"%1$s\" (%2$s) restored from trash."
+msgstr "Bericht \"%1$s\" (%2$s) teruggezet vanuit prullenbak."
+
+#: src/Listeners/PostListener.php
+#. translators: 1: post title, 2: post type
+msgid "Post \"%1$s\" (%2$s) permanently deleted."
+msgstr "Bericht \"%1$s\" (%2$s) definitief verwijderd."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: post ID
+msgid "Post meta \"%1$s\" added on post #%2$d."
+msgstr "Postmeta \"%1$s\" toegevoegd aan bericht #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: post ID
+msgid "Post meta \"%1$s\" updated on post #%2$d."
+msgstr "Postmeta \"%1$s\" bijgewerkt op bericht #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: post ID
+msgid "Post meta \"%1$s\" deleted from post #%2$d."
+msgstr "Postmeta \"%1$s\" verwijderd van bericht #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: user ID
+msgid "User meta \"%1$s\" added on user #%2$d."
+msgstr "Gebruikersmeta \"%1$s\" toegevoegd aan gebruiker #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: user ID
+msgid "User meta \"%1$s\" updated on user #%2$d."
+msgstr "Gebruikersmeta \"%1$s\" bijgewerkt op gebruiker #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: user ID
+msgid "User meta \"%1$s\" deleted from user #%2$d."
+msgstr "Gebruikersmeta \"%1$s\" verwijderd van gebruiker #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: term ID
+msgid "Term meta \"%1$s\" added on term #%2$d."
+msgstr "Termmeta \"%1$s\" toegevoegd aan term #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: term ID
+msgid "Term meta \"%1$s\" updated on term #%2$d."
+msgstr "Termmeta \"%1$s\" bijgewerkt op term #%2$d."
+
+#: src/Listeners/MetaListener.php
+#. translators: 1: meta key, 2: term ID
+msgid "Term meta \"%1$s\" deleted from term #%2$d."
+msgstr "Termmeta \"%1$s\" verwijderd van term #%2$d."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: user login
+msgid "New user registered: \"%1$s\"."
+msgstr "Nieuwe gebruiker geregistreerd: \"%1$s\"."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: user login
+msgid "User profile updated: \"%1$s\"."
+msgstr "Gebruikersprofiel bijgewerkt: \"%1$s\"."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: user login
+msgid "User deleted: \"%1$s\"."
+msgstr "Gebruiker verwijderd: \"%1$s\"."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: user login
+msgid "User \"%1$s\" logged in."
+msgstr "Gebruiker \"%1$s\" is ingelogd."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: user login
+msgid "User \"%1$s\" logged out."
+msgstr "Gebruiker \"%1$s\" is uitgelogd."
+
+#: src/Listeners/UserListener.php
+#. translators: 1: supplied username
+msgid "Failed login attempt for \"%1$s\"."
+msgstr "Mislukte inlogpoging voor \"%1$s\"."
+
+#: src/Listeners/OptionListener.php
+#. translators: 1: option name
+msgid "Option \"%1$s\" was added."
+msgstr "Optie \"%1$s\" is toegevoegd."
+
+#: src/Listeners/OptionListener.php
+#. translators: 1: option name
+msgid "Option \"%1$s\" was updated."
+msgstr "Optie \"%1$s\" is bijgewerkt."
+
+#: src/Listeners/OptionListener.php
+#. translators: 1: option name
+msgid "Option \"%1$s\" was deleted."
+msgstr "Optie \"%1$s\" is verwijderd."
+
+#: src/Listeners/TaxonomyListener.php
+#. translators: 1: term name, 2: taxonomy
+msgid "Term \"%1$s\" created in taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" aangemaakt in taxonomie \"%2$s\"."
+
+#: src/Listeners/TaxonomyListener.php
+#. translators: 1: term name, 2: taxonomy
+msgid "Term \"%1$s\" edited in taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" bewerkt in taxonomie \"%2$s\"."
+
+#: src/Listeners/TaxonomyListener.php
+#. translators: 1: term name, 2: taxonomy
+msgid "Term \"%1$s\" deleted from taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" verwijderd uit taxonomie \"%2$s\"."
+
+#: src/Listeners/TaxonomyListener.php
+#. translators: 1: taxonomy, 2: object ID
+msgid "Terms updated for taxonomy \"%1$s\" on object #%2$d."
+msgstr "Termen bijgewerkt voor taxonomie \"%1$s\" op object #%2$d."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author, 2: post ID
+msgid "Comment by \"%1$s\" added on post #%2$s."
+msgstr "Reactie van \"%1$s\" toegevoegd aan bericht #%2$s."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment ID
+msgid "Comment #%1$d was edited."
+msgstr "Reactie #%1$d is bewerkt."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author
+msgid "Comment by \"%1$s\" moved to trash."
+msgstr "Reactie van \"%1$s\" verplaatst naar prullenbak."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author
+msgid "Comment by \"%1$s\" restored from trash."
+msgstr "Reactie van \"%1$s\" teruggezet vanuit prullenbak."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author
+msgid "Comment by \"%1$s\" permanently deleted."
+msgstr "Reactie van \"%1$s\" definitief verwijderd."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author
+msgid "Comment by \"%1$s\" approved."
+msgstr "Reactie van \"%1$s\" goedgekeurd."
+
+#: src/Listeners/CommentListener.php
+#. translators: 1: comment author
+msgid "Comment by \"%1$s\" unapproved."
+msgstr "Reactie van \"%1$s\" afgekeurd."
+
+#: src/Listeners/MediaListener.php
+#. translators: 1: attachment title
+msgid "Media \"%1$s\" uploaded."
+msgstr "Media \"%1$s\" geüpload."
+
+#: src/Listeners/MediaListener.php
+#. translators: 1: attachment title
+msgid "Media \"%1$s\" edited."
+msgstr "Media \"%1$s\" bewerkt."
+
+#: src/Listeners/MediaListener.php
+#. translators: 1: attachment title
+msgid "Media \"%1$s\" deleted."
+msgstr "Media \"%1$s\" verwijderd."
+
+#: src/Listeners/PluginListener.php
+#. translators: 1: plugin name
+msgid "Plugin \"%1$s\" activated."
+msgstr "Plugin \"%1$s\" geactiveerd."
+
+#: src/Listeners/PluginListener.php
+#. translators: 1: plugin name
+msgid "Plugin \"%1$s\" deactivated."
+msgstr "Plugin \"%1$s\" gedeactiveerd."
+
+#: src/Listeners/PluginListener.php
+#. translators: 1: plugin file
+msgid "Plugin \"%1$s\" deleted."
+msgstr "Plugin \"%1$s\" verwijderd."
+
+#: src/Listeners/PluginListener.php
+#. translators: 1: plugin name, 2: action
+msgid "Plugin \"%1$s\" %2$s via upgrader."
+msgstr "Plugin \"%1$s\" %2$s via de updater."
+
+#: src/Listeners/ThemeListener.php
+#. translators: 1: old theme, 2: new theme
+msgid "Theme switched from \"%1$s\" to \"%2$s\"."
+msgstr "Thema gewisseld van \"%1$s\" naar \"%2$s\"."
+
+#: src/Listeners/ThemeListener.php
+#. translators: 1: theme name, 2: action
+msgid "Theme \"%1$s\" %2$s via upgrader."
+msgstr "Thema \"%1$s\" %2$s via de updater."
+
+#: src/Listeners/MenuListener.php
+#. translators: 1: menu name
+msgid "Navigation menu \"%1$s\" updated."
+msgstr "Navigatiemenu \"%1$s\" bijgewerkt."
+
+#: src/Listeners/MenuListener.php
+#. translators: 1: menu name
+msgid "Navigation menu \"%1$s\" deleted."
+msgstr "Navigatiemenu \"%1$s\" verwijderd."
+
+#: src/Listeners/MenuListener.php
+#. translators: 1: menu name
+msgid "Item added to navigation menu \"%1$s\"."
+msgstr "Item toegevoegd aan navigatiemenu \"%1$s\"."
+
+#: src/Listeners/MenuListener.php
+#. translators: 1: menu name
+msgid "Item updated in navigation menu \"%1$s\"."
+msgstr "Item bijgewerkt in navigatiemenu \"%1$s\"."
+
+#: src/Listeners/WidgetListener.php
+msgid "Widget sidebar assignments changed."
+msgstr "Widget-zijbalkindeling gewijzigd."
+
+#: src/Listeners/WidgetListener.php
+#. translators: 1: widget ID
+msgid "Widget \"%1$s\" settings updated."
+msgstr "Instellingen van widget \"%1$s\" bijgewerkt."

@@ -1,0 +1,68 @@
+/* OWC Activity Log — Admin styles */
+
+/* ── Group badges ── */
+.owcal-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: #ddd;
+	color: #333;
+}
+.owcal-badge--posts    { background: #c6e0f7; color: #0073aa; }
+.owcal-badge--meta     { background: #fce8d3; color: #b45309; }
+.owcal-badge--users    { background: #d4edda; color: #155724; }
+.owcal-badge--options  { background: #e2d9f3; color: #6f42c1; }
+.owcal-badge--taxonomy { background: #d1ecf1; color: #0c5460; }
+.owcal-badge--comments { background: #fff3cd; color: #856404; }
+.owcal-badge--media    { background: #f8d7da; color: #721c24; }
+.owcal-badge--plugins  { background: #d6d8d9; color: #1b1e21; }
+.owcal-badge--themes   { background: #e8f4fd; color: #0c63e4; }
+.owcal-badge--menus    { background: #fdebd0; color: #9c5700; }
+.owcal-badge--widgets  { background: #d0f0c0; color: #2d6a4f; }
+
+/* ── Message cell ── */
+.owcal-message-text {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.owcal-toggle {
+	display: inline-block;
+	margin-top: 2px;
+}
+
+.owcal-meta {
+	display: none;
+	margin-top: 8px;
+	padding: 10px 12px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	font-size: 11px;
+	max-height: 220px;
+	overflow: auto;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.owcal-meta.is-visible {
+	display: block;
+}
+
+/* ── Filter bar ── */
+.owcal-filters form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: flex-end;
+	margin: 8px 0 16px;
+}
+
+.owcal-filters label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 3px;
+}

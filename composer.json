@@ -1,0 +1,64 @@
+{
+	"name": "plugin/owc-activity-log",
+	"description": "Tracks all WordPress activity such as meta, options, users, posts, and more.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Mike van den Hoek",
+			"homepage": "https://github.com/mvdhoek1"
+		}
+	],
+	"require": {
+		"php": "^8.1",
+		"composer/installers": "^2.0"
+	},
+	"require-dev": {
+		"pestphp/pest": "^1.0",
+		"10up/wp_mock": "^1.0",
+		"mockery/mockery": "^1.6",
+		"squizlabs/php_codesniffer": "^3.7",
+		"wp-coding-standards/wpcs": "^3.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"brianhenryie/strauss": "^0.15.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"OWCActivityLog\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": "vendor/bin/pest",
+		"test:coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage",
+		"phpcs": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"phpcbf": "./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+		"prefix-dependencies": "strauss"
+	},
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"brianhenryie/composer-strauss": true
+		}
+	},
+	"extra": {
+		"installer-name": "owc-activity-log",
+		"strauss": {
+			"target_directory": "vendor-prefixed",
+			"namespace_prefix": "OWCActivityLog\\Vendor\\",
+			"classmap_prefix": "OWCActivityLog_",
+			"constant_prefix": "OWC_ACTIVITY_LOG_",
+			"exclude_from_prefix": {
+				"packages": [
+					"composer/installers"
+				]
+			}
+		}
+	}
+}
