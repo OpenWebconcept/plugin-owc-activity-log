@@ -12,7 +12,7 @@ declare(strict_types=1);
  * Plugin Name:       OWC Activity Log
  * Plugin URI:        https://github.com/OpenWebconcept/plugin-owc-activity-log
  * Description:       Tracks all WordPress activity such as posts, meta, options, users, taxonomy, comments, plugins, themes and more.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Yard | Digital Agency
  * Author URI:        https://www.yard.nl
  * License:           EUPL
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const OWC_ACTIVITY_LOG_VERSION     = '1.0.0';
+const OWC_ACTIVITY_LOG_VERSION     = '1.0.1';
 const OWC_ACTIVITY_LOG_REQUIRED_WP = '6.7';
 const OWC_ACTIVITY_LOG_FILE        = __FILE__;
 
