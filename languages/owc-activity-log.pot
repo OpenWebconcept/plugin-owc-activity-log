@@ -1,0 +1,467 @@
+# Copyright (C) 2026 Yard | Digital Agency
+# This file is distributed under the EUPL.
+msgid ""
+msgstr ""
+"Project-Id-Version: OWC Activity Log 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/owc-activity-log\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-10T05:17:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: owc-activity-log\n"
+
+#. Plugin Name of the plugin
+#: owc-activity-log.php
+msgid "OWC Activity Log"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: owc-activity-log.php
+msgid "https://github.com/OpenWebconcept/plugin-owc-activity-log"
+msgstr ""
+
+#. Description of the plugin
+#: owc-activity-log.php
+msgid "Tracks all WordPress activity such as posts, meta, options, users, taxonomy, comments, plugins, themes and more."
+msgstr ""
+
+#. Author of the plugin
+#: owc-activity-log.php
+msgid "Yard | Digital Agency"
+msgstr ""
+
+#. Author URI of the plugin
+#: owc-activity-log.php
+msgid "https://www.yard.nl"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:56
+msgid "Date / time"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:57
+#: src/Views/admin/partials/filters.php:36
+msgid "Group"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:58
+msgid "Action"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:59
+msgid "Message"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:60
+msgid "User"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:61
+#: src/Views/admin/partials/filters.php:48
+msgid "Object type"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:65
+msgid "IP"
+msgstr ""
+
+#: src/Admin/ActivityLogTable.php:164
+#: src/Providers/AdminServiceProvider.php:110
+msgid "Details"
+msgstr ""
+
+#: src/Controllers/AdminPageController.php:38
+#: src/Controllers/AdminPageController.php:64
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#: src/Controllers/AdminPageController.php:113
+msgid "Settings saved."
+msgstr ""
+
+#. translators: 1: comment author, 2: post ID
+#: src/Listeners/CommentListener.php:53
+#, php-format
+msgid "Comment by \"%1$s\" added on post #%2$s."
+msgstr ""
+
+#. translators: 1: comment ID
+#: src/Listeners/CommentListener.php:78
+#, php-format
+msgid "Comment #%1$d was edited."
+msgstr ""
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:96
+#, php-format
+msgid "Comment by \"%1$s\" moved to trash."
+msgstr ""
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:114
+#, php-format
+msgid "Comment by \"%1$s\" restored from trash."
+msgstr ""
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:132
+#, php-format
+msgid "Comment by \"%1$s\" permanently deleted."
+msgstr ""
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:150
+#, php-format
+msgid "Comment by \"%1$s\" approved."
+msgstr ""
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:168
+#, php-format
+msgid "Comment by \"%1$s\" unapproved."
+msgstr ""
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:50
+#, php-format
+msgid "Media \"%1$s\" uploaded."
+msgstr ""
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:71
+#, php-format
+msgid "Media \"%1$s\" edited."
+msgstr ""
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:91
+#, php-format
+msgid "Media \"%1$s\" deleted."
+msgstr ""
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:50
+#, php-format
+msgid "Navigation menu \"%1$s\" updated."
+msgstr ""
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:69
+#, php-format
+msgid "Navigation menu \"%1$s\" deleted."
+msgstr ""
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:88
+#, php-format
+msgid "Item added to navigation menu \"%1$s\"."
+msgstr ""
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:108
+#, php-format
+msgid "Item updated in navigation menu \"%1$s\"."
+msgstr ""
+
+#. translators: 1: meta key, 2: post ID
+#: src/Listeners/MetaListener.php:72
+#, php-format
+msgid "Post meta \"%1$s\" added on post #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: post ID
+#: src/Listeners/MetaListener.php:96
+#, php-format
+msgid "Post meta \"%1$s\" updated on post #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: post ID
+#: src/Listeners/MetaListener.php:120
+#, php-format
+msgid "Post meta \"%1$s\" deleted from post #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: user ID
+#: src/Listeners/MetaListener.php:141
+#, php-format
+msgid "User meta \"%1$s\" added on user #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: user ID
+#: src/Listeners/MetaListener.php:165
+#, php-format
+msgid "User meta \"%1$s\" updated on user #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: user ID
+#: src/Listeners/MetaListener.php:189
+#, php-format
+msgid "User meta \"%1$s\" deleted from user #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: term ID
+#: src/Listeners/MetaListener.php:210
+#, php-format
+msgid "Term meta \"%1$s\" added on term #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: term ID
+#: src/Listeners/MetaListener.php:234
+#, php-format
+msgid "Term meta \"%1$s\" updated on term #%2$d."
+msgstr ""
+
+#. translators: 1: meta key, 2: term ID
+#: src/Listeners/MetaListener.php:258
+#, php-format
+msgid "Term meta \"%1$s\" deleted from term #%2$d."
+msgstr ""
+
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:64
+#, php-format
+msgid "Option \"%1$s\" was added."
+msgstr ""
+
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:86
+#, php-format
+msgid "Option \"%1$s\" was updated."
+msgstr ""
+
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:109
+#, php-format
+msgid "Option \"%1$s\" was deleted."
+msgstr ""
+
+#. translators: 1: plugin name
+#: src/Listeners/PluginListener.php:50
+#, php-format
+msgid "Plugin \"%1$s\" activated."
+msgstr ""
+
+#. translators: 1: plugin name
+#: src/Listeners/PluginListener.php:72
+#, php-format
+msgid "Plugin \"%1$s\" deactivated."
+msgstr ""
+
+#. translators: 1: plugin file
+#: src/Listeners/PluginListener.php:94
+#, php-format
+msgid "Plugin \"%1$s\" deleted."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action
+#: src/Listeners/PluginListener.php:124
+#, php-format
+msgid "Plugin \"%1$s\" %2$s via upgrader."
+msgstr ""
+
+#. translators: 1: post title, 2: post type, 3: verb
+#: src/Listeners/PostListener.php:53
+#, php-format
+msgid "Post \"%1$s\" (%2$s) was %3$s."
+msgstr ""
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:111
+#, php-format
+msgid "Post \"%1$s\" (%2$s) fields changed."
+msgstr ""
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:137
+#, php-format
+msgid "Post \"%1$s\" (%2$s) moved to trash."
+msgstr ""
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:162
+#, php-format
+msgid "Post \"%1$s\" (%2$s) restored from trash."
+msgstr ""
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:186
+#, php-format
+msgid "Post \"%1$s\" (%2$s) permanently deleted."
+msgstr ""
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:51
+#, php-format
+msgid "Term \"%1$s\" created in taxonomy \"%2$s\"."
+msgstr ""
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:75
+#, php-format
+msgid "Term \"%1$s\" edited in taxonomy \"%2$s\"."
+msgstr ""
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:94
+#, php-format
+msgid "Term \"%1$s\" deleted from taxonomy \"%2$s\"."
+msgstr ""
+
+#. translators: 1: taxonomy, 2: object ID
+#: src/Listeners/TaxonomyListener.php:127
+#, php-format
+msgid "Terms updated for taxonomy \"%1$s\" on object #%2$d."
+msgstr ""
+
+#. translators: 1: old theme, 2: new theme
+#: src/Listeners/ThemeListener.php:47
+#, php-format
+msgid "Theme switched from \"%1$s\" to \"%2$s\"."
+msgstr ""
+
+#. translators: 1: theme name, 2: action
+#: src/Listeners/ThemeListener.php:83
+#, php-format
+msgid "Theme \"%1$s\" %2$s via upgrader."
+msgstr ""
+
+#. translators: 1: user login
+#: src/Listeners/UserListener.php:53
+#, php-format
+msgid "New user registered: \"%1$s\"."
+msgstr ""
+
+#. translators: 1: user login
+#: src/Listeners/UserListener.php:99
+#, php-format
+msgid "User profile updated: \"%1$s\"."
+msgstr ""
+
+#. translators: 1: user login
+#: src/Listeners/UserListener.php:121
+#, php-format
+msgid "User deleted: \"%1$s\"."
+msgstr ""
+
+#. translators: 1: user login
+#: src/Listeners/UserListener.php:141
+#, php-format
+msgid "User \"%1$s\" logged in."
+msgstr ""
+
+#. translators: 1: user login
+#: src/Listeners/UserListener.php:162
+#, php-format
+msgid "User \"%1$s\" logged out."
+msgstr ""
+
+#. translators: 1: supplied username
+#: src/Listeners/UserListener.php:184
+#, php-format
+msgid "Failed login attempt for \"%1$s\"."
+msgstr ""
+
+#: src/Listeners/WidgetListener.php:75
+msgid "Widget sidebar assignments changed."
+msgstr ""
+
+#. translators: 1: widget ID
+#: src/Listeners/WidgetListener.php:99
+#, php-format
+msgid "Widget \"%1$s\" settings updated."
+msgstr ""
+
+#: src/Providers/AdminServiceProvider.php:47
+msgid "Activity Tracker"
+msgstr ""
+
+#: src/Providers/AdminServiceProvider.php:48
+#: src/Providers/AdminServiceProvider.php:60
+#: src/Providers/AdminServiceProvider.php:61
+msgid "Activity Log"
+msgstr ""
+
+#: src/Providers/AdminServiceProvider.php:69
+#: src/Providers/AdminServiceProvider.php:70
+msgid "Settings"
+msgstr ""
+
+#: src/Providers/AdminServiceProvider.php:111
+msgid "Hide details"
+msgstr ""
+
+#: src/Views/admin/log-page.php:32
+msgid "Search messages"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:38
+msgid "— All groups —"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:50
+msgid "— All object types —"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:60
+msgid "From"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:70
+msgid "To"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:81
+msgid "Filter"
+msgstr ""
+
+#: src/Views/admin/partials/filters.php:83
+msgid "Reset"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:37
+msgid "Log retention (days)"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:49
+msgid "Log entries older than this number of days are deleted automatically."
+msgstr ""
+
+#: src/Views/admin/settings-page.php:55
+msgid "Log IP addresses"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:66
+msgid "Enable IP address logging"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:68
+msgid "When enabled, the IP address of the user is stored with each log entry."
+msgstr ""
+
+#: src/Views/admin/settings-page.php:74
+msgid "Tracked groups"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:88
+msgid "Uncheck groups to stop tracking them."
+msgstr ""
+
+#: src/Views/admin/settings-page.php:94
+msgid "Ignored meta keys"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:103
+msgid "One key per line. Wildcards supported: _my_prefix_*"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:109
+msgid "Ignored option names"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:118
+msgid "One option name per line. Wildcards supported: my_plugin_*"
+msgstr ""

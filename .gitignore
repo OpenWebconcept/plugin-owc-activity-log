@@ -19,6 +19,3 @@ Thumbs.db
 
 # PHP
 *.cache
-
-# WordPress
-*.pot
