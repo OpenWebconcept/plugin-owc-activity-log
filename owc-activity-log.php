@@ -42,6 +42,7 @@ const OWC_ACTIVITY_LOG_DB_OPTION              = 'owc_activity_log_db_version';
 const OWC_ACTIVITY_LOG_SETTINGS_KEY           = 'owc_activity_log_settings';
 const OWC_ACTIVITY_LOG_CRON_HOOK              = 'owc_activity_log_cleanup';
 const OWC_ACTIVITY_LOG_DEFAULT_RETENTION_DAYS = 30;
+const OWC_ACTIVITY_LOG_SETTINGS_PAGE_CAP      = 'manage_options';
 
 require_once __DIR__ . '/src/helpers.php';
 require_once __DIR__ . '/src/autoload.php';

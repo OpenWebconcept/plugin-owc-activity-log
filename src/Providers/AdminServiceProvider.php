@@ -46,7 +46,7 @@ class AdminServiceProvider extends ServiceProvider
 		add_menu_page(
 			__( 'Activity Tracker', 'owc-activity-log' ),
 			__( 'Activity Log', 'owc-activity-log' ),
-			'manage_options',
+			settings_page_cap(),
 			OWC_ACTIVITY_LOG_SLUG,
 			$controller->render_log( ... ),
 			'dashicons-visibility',
@@ -59,7 +59,7 @@ class AdminServiceProvider extends ServiceProvider
 			OWC_ACTIVITY_LOG_SLUG,
 			__( 'Activity Log', 'owc-activity-log' ),
 			__( 'Activity Log', 'owc-activity-log' ),
-			'manage_options',
+			settings_page_cap(),
 			OWC_ACTIVITY_LOG_SLUG,
 			''
 		);

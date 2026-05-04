@@ -80,3 +80,13 @@ function owc_activity_log_group_enabled( string $group ): bool
 
 	return in_array( $group, $settings['enabled_groups'], true );
 }
+
+/**
+ * @since NEXT
+ */
+function settings_page_cap(): string
+{
+	$cap = apply_filters( 'owc_activity_log_admin_page_overview_cap', OWC_ACTIVITY_LOG_SETTINGS_PAGE_CAP );
+
+	return is_string( $cap ) && '' !== trim( $cap ) ? $cap : OWC_ACTIVITY_LOG_SETTINGS_PAGE_CAP;
+}

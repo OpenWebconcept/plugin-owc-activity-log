@@ -34,7 +34,7 @@ class AdminPageController
 	 */
 	public function render_log(): void
 	{
-		if ( ! current_user_can( 'manage_options' ) ) {
+		if ( ! current_user_can( settings_page_cap() ) ) {
 			wp_die( esc_html__( 'You do not have permission to view this page.', 'owc-activity-log' ) );
 		}
 
@@ -60,7 +60,7 @@ class AdminPageController
 	 */
 	public function render_settings(): void
 	{
-		if ( ! current_user_can( 'manage_options' ) ) {
+		if ( ! current_user_can( settings_page_cap() ) ) {
 			wp_die( esc_html__( 'You do not have permission to view this page.', 'owc-activity-log' ) );
 		}
 
