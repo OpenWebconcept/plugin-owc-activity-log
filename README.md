@@ -22,6 +22,21 @@ Tracks all WordPress activity such as posts, meta, options, users, taxonomy, com
 2. `composer require plugin/owc-activity-log`
 3. `cd /wp-content/plugins/owc-activity-log`
 
+## Hooks
+
+### Admin overview page access
+
+By default, the overview page inside the WordPress admin of this plugin is only accessible to administrators.
+
+Some projects may require users with different roles or capabilities to access this page as well.  
+This filter allows you to customize the required capability.
+
+```php
+add_filter('owc_activity_log_admin_page_overview_cap', function ($cap) {
+    return 'superuser'; // Or any other capability.
+});
+```
+
 ## Development
 
 ### Install dependencies
