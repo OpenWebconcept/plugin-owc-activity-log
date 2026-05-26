@@ -82,7 +82,7 @@ function owc_activity_log_group_enabled( string $group ): bool
 }
 
 /**
- * @since NEXT
+ * @since 1.0.2
  */
 function settings_page_cap(): string
 {
