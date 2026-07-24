@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: OWC Activity Log 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/plugins/owc-activity-log\n"
+"Project-Id-Version: OWC Activity Log 1.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/owc-activity-log\n"
+"POT-Creation-Date: 2026-08-24T11:39:19+00:00\n"
+"PO-Revision-Date: 2026-08-24T00:00:00+00:00\n"
 "Last-Translator: Mike van den Hoek\n"
 "Language-Team: Dutch\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-12T00:00:00+00:00\n"
-"PO-Revision-Date: 2026-03-12T00:00:00+00:00\n"
-"Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Manual\n"
 "X-Domain: owc-activity-log\n"
@@ -19,32 +19,35 @@ msgstr ""
 msgid "OWC Activity Log"
 msgstr "OWC Activiteitenlog"
 
+#. Plugin URI of the plugin
+#: owc-activity-log.php
+msgid "https://github.com/OpenWebconcept/plugin-owc-activity-log"
+msgstr ""
+
 #. Description of the plugin
 #: owc-activity-log.php
-msgid "Tracks all WordPress activity such as posts, meta, options, users, taxonomy, comments, plugins, themes and more."
-msgstr "Registreert alle WordPress-activiteit zoals berichten, meta, opties, gebruikers, taxonomieën, reacties, plugins, thema's en meer."
+msgid ""
+"Tracks all WordPress activity such as posts, meta, options, users, taxonomy, "
+"comments, plugins, themes and more."
+msgstr ""
+"Registreert alle WordPress-activiteit zoals berichten, meta, opties, "
+"gebruikers, taxonomieën, reacties, plugins, thema's en meer."
 
-#: src/Providers/AdminServiceProvider.php:47
-msgid "Activity Tracker"
-msgstr "Activiteitstracker"
+#. Author of the plugin
+#: owc-activity-log.php
+msgid "Yard | Digital Agency"
+msgstr ""
 
-#: src/Providers/AdminServiceProvider.php:48
-#: src/Providers/AdminServiceProvider.php:60
-#: src/Providers/AdminServiceProvider.php:61
-msgid "Activity Log"
-msgstr "Activiteitenlog"
-
-#: src/Providers/AdminServiceProvider.php:69
-#: src/Providers/AdminServiceProvider.php:70
-msgid "Settings"
-msgstr "Instellingen"
+#. Author URI of the plugin
+#: owc-activity-log.php
+msgid "https://www.yard.nl"
+msgstr ""
 
 #: src/Admin/ActivityLogTable.php:56
 msgid "Date / time"
 msgstr "Datum / tijd"
 
-#: src/Admin/ActivityLogTable.php:57
-#: src/Views/admin/partials/filters.php:36
+#: src/Admin/ActivityLogTable.php:57 src/Views/admin/partials/filters.php:36
 msgid "Group"
 msgstr "Groep"
 
@@ -60,8 +63,7 @@ msgstr "Bericht"
 msgid "User"
 msgstr "Gebruiker"
 
-#: src/Admin/ActivityLogTable.php:61
-#: src/Views/admin/partials/filters.php:48
+#: src/Admin/ActivityLogTable.php:61 src/Views/admin/partials/filters.php:48
 msgid "Object type"
 msgstr "Objecttype"
 
@@ -69,18 +71,54 @@ msgstr "Objecttype"
 msgid "IP"
 msgstr "IP-adres"
 
-#: src/Views/admin/log-page.php:32
-msgid "Search messages"
-msgstr "Berichten zoeken"
-
-#: src/Admin/ActivityLogTable.php:164
+#: src/Admin/ActivityLogTable.php:169
 #: src/Providers/AdminServiceProvider.php:110
 msgid "Details"
 msgstr "Details"
 
-#: src/Providers/AdminServiceProvider.php:111
-msgid "Hide details"
-msgstr "Details verbergen"
+#: src/Admin/ActivityLogTable.php:214
+msgid "Added"
+msgstr "Toegevoegd"
+
+#: src/Admin/ActivityLogTable.php:215
+msgid "Removed"
+msgstr "Verwijderd"
+
+#: src/Admin/ActivityLogTable.php:216
+msgid "Changed"
+msgstr "Gewijzigd"
+
+#. translators: %s: comma-separated list of added items
+#: src/Admin/ActivityLogTable.php:362
+#, php-format
+msgid "added: %s"
+msgstr "toegevoegd: %s"
+
+#. translators: %s: comma-separated list of removed items
+#: src/Admin/ActivityLogTable.php:370
+#, php-format
+msgid "removed: %s"
+msgstr "verwijderd: %s"
+
+#: src/Admin/ActivityLogTable.php:376
+msgid "(no change)"
+msgstr "(geen wijziging)"
+
+#: src/Admin/ActivityLogTable.php:400
+msgid "(none)"
+msgstr "(geen)"
+
+#: src/Admin/ActivityLogTable.php:404
+msgid "Yes"
+msgstr "Ja"
+
+#: src/Admin/ActivityLogTable.php:404
+msgid "No"
+msgstr "Nee"
+
+#: src/Admin/ActivityLogTable.php:408
+msgid "(empty)"
+msgstr "(leeg)"
 
 #: src/Controllers/AdminPageController.php:38
 #: src/Controllers/AdminPageController.php:64
@@ -91,103 +129,129 @@ msgstr "U heeft geen toestemming om deze pagina te bekijken."
 msgid "Settings saved."
 msgstr "Instellingen opgeslagen."
 
-#: src/Views/admin/partials/filters.php:38
-msgid "— All groups —"
-msgstr "— Alle groepen —"
-
-#: src/Views/admin/partials/filters.php:50
-msgid "— All object types —"
-msgstr "— Alle objecttypen —"
-
-#: src/Views/admin/partials/filters.php:60
-msgid "From"
-msgstr "Van"
-
-#: src/Views/admin/partials/filters.php:70
-msgid "To"
-msgstr "Tot"
-
-#: src/Views/admin/partials/filters.php:81
-msgid "Filter"
-msgstr "Filteren"
-
-#: src/Views/admin/partials/filters.php:83
-msgid "Reset"
-msgstr "Resetten"
-
-#: src/Views/admin/settings-page.php:55
-msgid "Log IP addresses"
-msgstr "IP-adressen loggen"
-
-#: src/Views/admin/settings-page.php:66
-msgid "Enable IP address logging"
-msgstr "IP-adresregistratie inschakelen"
-
-#: src/Views/admin/settings-page.php:68
-msgid "When enabled, the IP address of the user is stored with each log entry."
-msgstr "Indien ingeschakeld wordt het IP-adres van de gebruiker bij elke logregel opgeslagen."
-
-#: src/Views/admin/settings-page.php:37
-msgid "Log retention (days)"
-msgstr "Logbehoud (dagen)"
-
-#: src/Views/admin/settings-page.php:49
-msgid "Log entries older than this number of days are deleted automatically."
-msgstr "Logregels ouder dan dit aantal dagen worden automatisch verwijderd."
-
-#: src/Views/admin/settings-page.php:74
-msgid "Tracked groups"
-msgstr "Bijgehouden groepen"
-
-#: src/Views/admin/settings-page.php:88
-msgid "Uncheck groups to stop tracking them."
-msgstr "Schakel groepen uit om ze niet meer bij te houden."
-
-#: src/Views/admin/settings-page.php:94
-msgid "Ignored meta keys"
-msgstr "Genegeerde meta-sleutels"
-
-#: src/Views/admin/settings-page.php:103
-msgid "One key per line. Wildcards supported: _my_prefix_*"
-msgstr "Één sleutel per regel. Wildcards ondersteund: _mijn_prefix_*"
-
-#: src/Views/admin/settings-page.php:109
-msgid "Ignored option names"
-msgstr "Genegeerde optienamen"
-
-#: src/Views/admin/settings-page.php:118
-msgid "One option name per line. Wildcards supported: my_plugin_*"
-msgstr "Één optienaam per regel. Wildcards ondersteund: mijn_plugin_*"
-
-#. translators: 1: post title, 2: post type, 3: verb
-#: src/Listeners/PostListener.php:53
+#. translators: 1: comment author, 2: post ID
+#: src/Listeners/CommentListener.php:53
 #, php-format
-msgid "Post \"%1$s\" (%2$s) was %3$s."
-msgstr "Bericht \"%1$s\" (%2$s) is %3$s."
+msgid "Comment by \"%1$s\" added on post #%2$s."
+msgstr "Reactie van \"%1$s\" toegevoegd aan bericht #%2$s."
 
-#. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:111
+#. translators: 1: comment ID
+#: src/Listeners/CommentListener.php:78
 #, php-format
-msgid "Post \"%1$s\" (%2$s) fields changed."
-msgstr "Velden van bericht \"%1$s\" (%2$s) zijn gewijzigd."
+msgid "Comment #%1$d was edited."
+msgstr "Reactie #%1$d is bewerkt."
 
-#. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:137
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:96
 #, php-format
-msgid "Post \"%1$s\" (%2$s) moved to trash."
-msgstr "Bericht \"%1$s\" (%2$s) verplaatst naar prullenbak."
+msgid "Comment by \"%1$s\" moved to trash."
+msgstr "Reactie van \"%1$s\" verplaatst naar prullenbak."
 
-#. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:162
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:114
 #, php-format
-msgid "Post \"%1$s\" (%2$s) restored from trash."
-msgstr "Bericht \"%1$s\" (%2$s) teruggezet vanuit prullenbak."
+msgid "Comment by \"%1$s\" restored from trash."
+msgstr "Reactie van \"%1$s\" teruggezet vanuit prullenbak."
 
-#. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:186
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:132
 #, php-format
-msgid "Post \"%1$s\" (%2$s) permanently deleted."
-msgstr "Bericht \"%1$s\" (%2$s) definitief verwijderd."
+msgid "Comment by \"%1$s\" permanently deleted."
+msgstr "Reactie van \"%1$s\" definitief verwijderd."
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:150
+#, php-format
+msgid "Comment by \"%1$s\" approved."
+msgstr "Reactie van \"%1$s\" goedgekeurd."
+
+#. translators: 1: comment author
+#: src/Listeners/CommentListener.php:168
+#, php-format
+msgid "Comment by \"%1$s\" unapproved."
+msgstr "Reactie van \"%1$s\" afgekeurd."
+
+#. translators: 1: form title, 2: plain-language summary of what changed
+#: src/Listeners/GravityFormsListener.php:222
+#, php-format
+msgid "Form \"%1$s\" updated: %2$s."
+msgstr "Formulier \"%1$s\" bijgewerkt: %2$s."
+
+#. translators: 1: form title, 2: plain-language summary of the initial fields
+#: src/Listeners/GravityFormsListener.php:255
+#, php-format
+msgid "Form \"%1$s\" created: %2$s."
+msgstr "Formulier \"%1$s\" aangemaakt: %2$s."
+
+#: src/Listeners/GravityFormsListener.php:257
+msgid "no fields"
+msgstr "geen velden"
+
+#: src/Listeners/GravityFormsListener.php:280
+msgid "(untitled field)"
+msgstr "(veld zonder titel)"
+
+#: src/Listeners/GravityFormsListener.php:286
+msgid "changed"
+msgstr "gewijzigd"
+
+#: src/Listeners/GravityFormsListener.php:287
+msgid "added"
+msgstr "toegevoegd"
+
+#: src/Listeners/GravityFormsListener.php:288
+msgid "removed"
+msgstr "verwijderd"
+
+#. translators: %d: number of additional fields not spelled out
+#: src/Listeners/GravityFormsListener.php:316
+#, php-format
+msgid "and %d more"
+msgid_plural "and %d more"
+msgstr[0] "en %d meer"
+msgstr[1] "en %d meer"
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:50
+#, php-format
+msgid "Media \"%1$s\" uploaded."
+msgstr "Media \"%1$s\" geüpload."
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:71
+#, php-format
+msgid "Media \"%1$s\" edited."
+msgstr "Media \"%1$s\" bewerkt."
+
+#. translators: 1: attachment title
+#: src/Listeners/MediaListener.php:91
+#, php-format
+msgid "Media \"%1$s\" deleted."
+msgstr "Media \"%1$s\" verwijderd."
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:50
+#, php-format
+msgid "Navigation menu \"%1$s\" updated."
+msgstr "Navigatiemenu \"%1$s\" bijgewerkt."
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:69
+#, php-format
+msgid "Navigation menu \"%1$s\" deleted."
+msgstr "Navigatiemenu \"%1$s\" verwijderd."
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:88
+#, php-format
+msgid "Item added to navigation menu \"%1$s\"."
+msgstr "Item toegevoegd aan navigatiemenu \"%1$s\"."
+
+#. translators: 1: menu name
+#: src/Listeners/MenuListener.php:108
+#, php-format
+msgid "Item updated in navigation menu \"%1$s\"."
+msgstr "Item bijgewerkt in navigatiemenu \"%1$s\"."
 
 #. translators: 1: meta key, 2: post ID
 #: src/Listeners/MetaListener.php:72
@@ -243,6 +307,114 @@ msgstr "Termmeta \"%1$s\" bijgewerkt op term #%2$d."
 msgid "Term meta \"%1$s\" deleted from term #%2$d."
 msgstr "Termmeta \"%1$s\" verwijderd van term #%2$d."
 
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:64
+#, php-format
+msgid "Option \"%1$s\" was added."
+msgstr "Optie \"%1$s\" is toegevoegd."
+
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:86
+#, php-format
+msgid "Option \"%1$s\" was updated."
+msgstr "Optie \"%1$s\" is bijgewerkt."
+
+#. translators: 1: option name
+#: src/Listeners/OptionListener.php:109
+#, php-format
+msgid "Option \"%1$s\" was deleted."
+msgstr "Optie \"%1$s\" is verwijderd."
+
+#. translators: 1: plugin name
+#: src/Listeners/PluginListener.php:50
+#, php-format
+msgid "Plugin \"%1$s\" activated."
+msgstr "Plugin \"%1$s\" geactiveerd."
+
+#. translators: 1: plugin name
+#: src/Listeners/PluginListener.php:72
+#, php-format
+msgid "Plugin \"%1$s\" deactivated."
+msgstr "Plugin \"%1$s\" gedeactiveerd."
+
+#. translators: 1: plugin file
+#: src/Listeners/PluginListener.php:94
+#, php-format
+msgid "Plugin \"%1$s\" deleted."
+msgstr "Plugin \"%1$s\" verwijderd."
+
+#. translators: 1: plugin name, 2: action
+#: src/Listeners/PluginListener.php:124
+#, php-format
+msgid "Plugin \"%1$s\" %2$s via upgrader."
+msgstr "Plugin \"%1$s\" %2$s via de updater."
+
+#. translators: 1: post title, 2: post type, 3: verb
+#: src/Listeners/PostListener.php:53
+#, php-format
+msgid "Post \"%1$s\" (%2$s) was %3$s."
+msgstr "Bericht \"%1$s\" (%2$s) is %3$s."
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:111
+#, php-format
+msgid "Post \"%1$s\" (%2$s) fields changed."
+msgstr "Velden van bericht \"%1$s\" (%2$s) zijn gewijzigd."
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:137
+#, php-format
+msgid "Post \"%1$s\" (%2$s) moved to trash."
+msgstr "Bericht \"%1$s\" (%2$s) verplaatst naar prullenbak."
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:162
+#, php-format
+msgid "Post \"%1$s\" (%2$s) restored from trash."
+msgstr "Bericht \"%1$s\" (%2$s) teruggezet vanuit prullenbak."
+
+#. translators: 1: post title, 2: post type
+#: src/Listeners/PostListener.php:186
+#, php-format
+msgid "Post \"%1$s\" (%2$s) permanently deleted."
+msgstr "Bericht \"%1$s\" (%2$s) definitief verwijderd."
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:51
+#, php-format
+msgid "Term \"%1$s\" created in taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" aangemaakt in taxonomie \"%2$s\"."
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:75
+#, php-format
+msgid "Term \"%1$s\" edited in taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" bewerkt in taxonomie \"%2$s\"."
+
+#. translators: 1: term name, 2: taxonomy
+#: src/Listeners/TaxonomyListener.php:94
+#, php-format
+msgid "Term \"%1$s\" deleted from taxonomy \"%2$s\"."
+msgstr "Term \"%1$s\" verwijderd uit taxonomie \"%2$s\"."
+
+#. translators: 1: taxonomy, 2: object ID
+#: src/Listeners/TaxonomyListener.php:127
+#, php-format
+msgid "Terms updated for taxonomy \"%1$s\" on object #%2$d."
+msgstr "Termen bijgewerkt voor taxonomie \"%1$s\" op object #%2$d."
+
+#. translators: 1: old theme, 2: new theme
+#: src/Listeners/ThemeListener.php:47
+#, php-format
+msgid "Theme switched from \"%1$s\" to \"%2$s\"."
+msgstr "Thema gewisseld van \"%1$s\" naar \"%2$s\"."
+
+#. translators: 1: theme name, 2: action
+#: src/Listeners/ThemeListener.php:83
+#, php-format
+msgid "Theme \"%1$s\" %2$s via upgrader."
+msgstr "Thema \"%1$s\" %2$s via de updater."
+
 #. translators: 1: user login
 #: src/Listeners/UserListener.php:53
 #, php-format
@@ -279,168 +451,6 @@ msgstr "Gebruiker \"%1$s\" is uitgelogd."
 msgid "Failed login attempt for \"%1$s\"."
 msgstr "Mislukte inlogpoging voor \"%1$s\"."
 
-#. translators: 1: option name
-#: src/Listeners/OptionListener.php:64
-#, php-format
-msgid "Option \"%1$s\" was added."
-msgstr "Optie \"%1$s\" is toegevoegd."
-
-#. translators: 1: option name
-#: src/Listeners/OptionListener.php:86
-#, php-format
-msgid "Option \"%1$s\" was updated."
-msgstr "Optie \"%1$s\" is bijgewerkt."
-
-#. translators: 1: option name
-#: src/Listeners/OptionListener.php:109
-#, php-format
-msgid "Option \"%1$s\" was deleted."
-msgstr "Optie \"%1$s\" is verwijderd."
-
-#. translators: 1: term name, 2: taxonomy
-#: src/Listeners/TaxonomyListener.php:51
-#, php-format
-msgid "Term \"%1$s\" created in taxonomy \"%2$s\"."
-msgstr "Term \"%1$s\" aangemaakt in taxonomie \"%2$s\"."
-
-#. translators: 1: term name, 2: taxonomy
-#: src/Listeners/TaxonomyListener.php:75
-#, php-format
-msgid "Term \"%1$s\" edited in taxonomy \"%2$s\"."
-msgstr "Term \"%1$s\" bewerkt in taxonomie \"%2$s\"."
-
-#. translators: 1: term name, 2: taxonomy
-#: src/Listeners/TaxonomyListener.php:94
-#, php-format
-msgid "Term \"%1$s\" deleted from taxonomy \"%2$s\"."
-msgstr "Term \"%1$s\" verwijderd uit taxonomie \"%2$s\"."
-
-#. translators: 1: taxonomy, 2: object ID
-#: src/Listeners/TaxonomyListener.php:127
-#, php-format
-msgid "Terms updated for taxonomy \"%1$s\" on object #%2$d."
-msgstr "Termen bijgewerkt voor taxonomie \"%1$s\" op object #%2$d."
-
-#. translators: 1: comment author, 2: post ID
-#: src/Listeners/CommentListener.php:53
-#, php-format
-msgid "Comment by \"%1$s\" added on post #%2$s."
-msgstr "Reactie van \"%1$s\" toegevoegd aan bericht #%2$s."
-
-#. translators: 1: comment ID
-#: src/Listeners/CommentListener.php:78
-#, php-format
-msgid "Comment #%1$d was edited."
-msgstr "Reactie #%1$d is bewerkt."
-
-#. translators: 1: comment author
-#: src/Listeners/CommentListener.php:96
-#, php-format
-msgid "Comment by \"%1$s\" moved to trash."
-msgstr "Reactie van \"%1$s\" verplaatst naar prullenbak."
-
-#. translators: 1: comment author
-#: src/Listeners/CommentListener.php:114
-#, php-format
-msgid "Comment by \"%1$s\" restored from trash."
-msgstr "Reactie van \"%1$s\" teruggezet vanuit prullenbak."
-
-#. translators: 1: comment author
-#: src/Listeners/CommentListener.php:132
-#, php-format
-msgid "Comment by \"%1$s\" permanently deleted."
-msgstr "Reactie van \"%1$s\" definitief verwijderd."
-
-#. translators: 1: comment author
-#: src/Listeners/CommentListener.php:150
-#, php-format
-msgid "Comment by \"%1$s\" approved."
-msgstr "Reactie van \"%1$s\" goedgekeurd."
-
-#. translators: 1: comment author
-#: src/Listeners/CommentListener.php:168
-#, php-format
-msgid "Comment by \"%1$s\" unapproved."
-msgstr "Reactie van \"%1$s\" afgekeurd."
-
-#. translators: 1: attachment title
-#: src/Listeners/MediaListener.php:50
-#, php-format
-msgid "Media \"%1$s\" uploaded."
-msgstr "Media \"%1$s\" geüpload."
-
-#. translators: 1: attachment title
-#: src/Listeners/MediaListener.php:71
-#, php-format
-msgid "Media \"%1$s\" edited."
-msgstr "Media \"%1$s\" bewerkt."
-
-#. translators: 1: attachment title
-#: src/Listeners/MediaListener.php:91
-#, php-format
-msgid "Media \"%1$s\" deleted."
-msgstr "Media \"%1$s\" verwijderd."
-
-#. translators: 1: plugin name
-#: src/Listeners/PluginListener.php:50
-#, php-format
-msgid "Plugin \"%1$s\" activated."
-msgstr "Plugin \"%1$s\" geactiveerd."
-
-#. translators: 1: plugin name
-#: src/Listeners/PluginListener.php:72
-#, php-format
-msgid "Plugin \"%1$s\" deactivated."
-msgstr "Plugin \"%1$s\" gedeactiveerd."
-
-#. translators: 1: plugin file
-#: src/Listeners/PluginListener.php:94
-#, php-format
-msgid "Plugin \"%1$s\" deleted."
-msgstr "Plugin \"%1$s\" verwijderd."
-
-#. translators: 1: plugin name, 2: action
-#: src/Listeners/PluginListener.php:124
-#, php-format
-msgid "Plugin \"%1$s\" %2$s via upgrader."
-msgstr "Plugin \"%1$s\" %2$s via de updater."
-
-#. translators: 1: old theme, 2: new theme
-#: src/Listeners/ThemeListener.php:47
-#, php-format
-msgid "Theme switched from \"%1$s\" to \"%2$s\"."
-msgstr "Thema gewisseld van \"%1$s\" naar \"%2$s\"."
-
-#. translators: 1: theme name, 2: action
-#: src/Listeners/ThemeListener.php:83
-#, php-format
-msgid "Theme \"%1$s\" %2$s via upgrader."
-msgstr "Thema \"%1$s\" %2$s via de updater."
-
-#. translators: 1: menu name
-#: src/Listeners/MenuListener.php:50
-#, php-format
-msgid "Navigation menu \"%1$s\" updated."
-msgstr "Navigatiemenu \"%1$s\" bijgewerkt."
-
-#. translators: 1: menu name
-#: src/Listeners/MenuListener.php:69
-#, php-format
-msgid "Navigation menu \"%1$s\" deleted."
-msgstr "Navigatiemenu \"%1$s\" verwijderd."
-
-#. translators: 1: menu name
-#: src/Listeners/MenuListener.php:88
-#, php-format
-msgid "Item added to navigation menu \"%1$s\"."
-msgstr "Item toegevoegd aan navigatiemenu \"%1$s\"."
-
-#. translators: 1: menu name
-#: src/Listeners/MenuListener.php:108
-#, php-format
-msgid "Item updated in navigation menu \"%1$s\"."
-msgstr "Item bijgewerkt in navigatiemenu \"%1$s\"."
-
 #: src/Listeners/WidgetListener.php:75
 msgid "Widget sidebar assignments changed."
 msgstr "Widget-zijbalkindeling gewijzigd."
@@ -451,17 +461,95 @@ msgstr "Widget-zijbalkindeling gewijzigd."
 msgid "Widget \"%1$s\" settings updated."
 msgstr "Instellingen van widget \"%1$s\" bijgewerkt."
 
-#. Plugin URI of the plugin
-#: owc-activity-log.php
-msgid "https://github.com/OpenWebconcept/plugin-owc-activity-log"
-msgstr ""
+#: src/Providers/AdminServiceProvider.php:47
+msgid "Activity Tracker"
+msgstr "Activiteitstracker"
 
-#. Author of the plugin
-#: owc-activity-log.php
-msgid "Yard | Digital Agency"
-msgstr ""
+#: src/Providers/AdminServiceProvider.php:48
+#: src/Providers/AdminServiceProvider.php:60
+#: src/Providers/AdminServiceProvider.php:61
+msgid "Activity Log"
+msgstr "Activiteitenlog"
 
-#. Author URI of the plugin
-#: owc-activity-log.php
-msgid "https://www.yard.nl"
+#: src/Providers/AdminServiceProvider.php:69
+#: src/Providers/AdminServiceProvider.php:70
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/Providers/AdminServiceProvider.php:111
+msgid "Hide details"
+msgstr "Details verbergen"
+
+#: src/Views/admin/log-page.php:32
+msgid "Search messages"
+msgstr "Berichten zoeken"
+
+#: src/Views/admin/partials/filters.php:38
+msgid "— All groups —"
+msgstr "— Alle groepen —"
+
+#: src/Views/admin/partials/filters.php:50
+msgid "— All object types —"
+msgstr "— Alle objecttypen —"
+
+#: src/Views/admin/partials/filters.php:60
+msgid "From"
+msgstr "Van"
+
+#: src/Views/admin/partials/filters.php:70
+msgid "To"
+msgstr "Tot"
+
+#: src/Views/admin/partials/filters.php:81
+msgid "Filter"
+msgstr "Filteren"
+
+#: src/Views/admin/partials/filters.php:83
+msgid "Reset"
+msgstr "Resetten"
+
+#: src/Views/admin/settings-page.php:37
+msgid "Log retention (days)"
+msgstr "Logbehoud (dagen)"
+
+#: src/Views/admin/settings-page.php:49
+msgid "Log entries older than this number of days are deleted automatically."
+msgstr "Logregels ouder dan dit aantal dagen worden automatisch verwijderd."
+
+#: src/Views/admin/settings-page.php:55
+msgid "Log IP addresses"
+msgstr "IP-adressen loggen"
+
+#: src/Views/admin/settings-page.php:66
+msgid "Enable IP address logging"
+msgstr "IP-adresregistratie inschakelen"
+
+#: src/Views/admin/settings-page.php:68
+msgid "When enabled, the IP address of the user is stored with each log entry."
 msgstr ""
+"Indien ingeschakeld wordt het IP-adres van de gebruiker bij elke logregel "
+"opgeslagen."
+
+#: src/Views/admin/settings-page.php:74
+msgid "Tracked groups"
+msgstr "Bijgehouden groepen"
+
+#: src/Views/admin/settings-page.php:88
+msgid "Uncheck groups to stop tracking them."
+msgstr "Schakel groepen uit om ze niet meer bij te houden."
+
+#: src/Views/admin/settings-page.php:94
+msgid "Ignored meta keys"
+msgstr "Genegeerde meta-sleutels"
+
+#: src/Views/admin/settings-page.php:103
+msgid "One key per line. Wildcards supported: _my_prefix_*"
+msgstr "Één sleutel per regel. Wildcards ondersteund: _mijn_prefix_*"
+
+#: src/Views/admin/settings-page.php:109
+msgid "Ignored option names"
+msgstr "Genegeerde optienamen"
+
+#: src/Views/admin/settings-page.php:118
+msgid "One option name per line. Wildcards supported: my_plugin_*"
+msgstr "Één optienaam per regel. Wildcards ondersteund: mijn_plugin_*"

@@ -78,7 +78,7 @@ class AdminPageController
 	 */
 	private function save_settings(): void
 	{
-		$all_groups = array( 'posts', 'meta', 'users', 'options', 'taxonomy', 'comments', 'media', 'plugins', 'themes', 'menus', 'widgets' );
+		$all_groups = owc_activity_log_all_groups();
 
 		// phpcs:disable WordPress.Security.NonceVerification.Missing -- already verified above
 		$retention_days = isset( $_POST['retention_days'] ) ? absint( $_POST['retention_days'] ) : OWC_ACTIVITY_LOG_DEFAULT_RETENTION_DAYS;

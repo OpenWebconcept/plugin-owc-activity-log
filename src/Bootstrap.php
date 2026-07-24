@@ -37,9 +37,25 @@ final class Bootstrap
 
 	public function __construct()
 	{
+		owc_activity_log_maybe_migrate_enabled_groups();
+
+		$this->register_plugin_text_domain();
 		$this->providers = $this->get_providers();
 		$this->register_providers();
 		$this->boot_providers();
+	}
+
+	/**
+	 * @since NEXT
+	 */
+	protected function register_plugin_text_domain(): void
+	{
+		add_action(
+			'init',
+			function () {
+				load_plugin_textdomain( 'owc-activity-log', false, dirname( plugin_basename( OWC_ACTIVITY_LOG_FILE ) ) . '/languages' );
+			}
+		);
 	}
 
 	protected function get_providers(): array

@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Closure;
+use GFAPI;
 use OWCActivityLog\Listeners\CommentListener;
+use OWCActivityLog\Listeners\GravityFormsListener;
 use OWCActivityLog\Listeners\MediaListener;
 use OWCActivityLog\Listeners\MenuListener;
 use OWCActivityLog\Listeners\MetaListener;
@@ -55,6 +57,10 @@ class ListenerServiceProvider extends ServiceProvider
 			new WidgetListener(),
 		);
 
+		if ( class_exists( GFAPI::class ) ) {
+			$listeners[] = new GravityFormsListener();
+		}
+
 		foreach ( $listeners as $listener ) {
 			foreach ( $listener->get_hooks() as $hook => $config ) {
 				add_action(
@@ -66,11 +72,8 @@ class ListenerServiceProvider extends ServiceProvider
 			}
 		}
 
-		// WidgetListener also registers a filter.
 		foreach ( $listeners as $listener ) {
-			if ( $listener instanceof WidgetListener ) {
-				$listener->register_filter();
-			}
+			$listener->register_filter();
 		}
 	}
 }

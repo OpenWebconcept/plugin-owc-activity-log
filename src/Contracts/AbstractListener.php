@@ -42,6 +42,14 @@ abstract class AbstractListener
 	abstract public function get_hooks(): array;
 
 	/**
+	 * Register any filter hooks this listener needs, beyond get_hooks().
+	 * No-op by default; listeners that need a filter (not an action) override this.
+	 */
+	public function register_filter(): void
+	{
+	}
+
+	/**
 	 * Write an activity record.
 	 */
 	protected function log(

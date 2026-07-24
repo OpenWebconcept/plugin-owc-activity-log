@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 $settings   = owc_activity_log_get_settings();
-$all_groups = array( 'posts', 'meta', 'users', 'options', 'taxonomy', 'comments', 'media', 'plugins', 'themes', 'menus', 'widgets' );
+$all_groups = owc_activity_log_all_groups();
 // phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
 ?>
