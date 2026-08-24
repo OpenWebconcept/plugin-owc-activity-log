@@ -46,7 +46,7 @@ final class Bootstrap
 	}
 
 	/**
-	 * @since NEXT
+	 * @since 1.1.0
 	 */
 	protected function register_plugin_text_domain(): void
 	{

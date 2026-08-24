@@ -40,7 +40,7 @@ function owc_activity_log_render_view( string $view, array $data = array() ): vo
  * The full set of selectable activity groups, used as the settings page
  * checkbox list, the enabled-by-default list, and the save-time whitelist.
  *
- * @since NEXT
+ * @since 1.1.0
  */
 function owc_activity_log_all_groups(): array
 {
@@ -90,7 +90,7 @@ function owc_activity_log_get_settings(): array
  * enabled_groups list win outright, and the new GF listener stays silently
  * disabled until someone re-saves the settings page.
  *
- * @since NEXT
+ * @since 1.1.0
  */
 function owc_activity_log_maybe_migrate_enabled_groups(): void
 {
