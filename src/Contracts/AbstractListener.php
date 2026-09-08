@@ -127,7 +127,7 @@ abstract class AbstractListener
 	/**
 	 * Check whether a post type should be ignored.
 	 *
-	 * @since NEXT
+	 * @since 1.2.0
 	 */
 	protected function is_ignored_post_type( string $post_type ): bool
 	{

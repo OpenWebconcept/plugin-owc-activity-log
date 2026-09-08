@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.2.0] - 2026-09-08
+
+-   Added: configure post types to be excluded from logging
+
 ## [v1.1.0] - 2026-08-24
 
 -   Added: log GF form changes + beautify log information in overview

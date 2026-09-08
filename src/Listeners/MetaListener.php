@@ -290,7 +290,7 @@ class MetaListener extends AbstractListener
 	/**
 	 * Check whether a post's type is ignored, so its meta is not logged either.
 	 *
-	 * @since NEXT
+	 * @since 1.2.0
 	 */
 	private function is_ignored_post( int $post_id ): bool
 	{
