@@ -24,6 +24,7 @@ function owc_activity_log_make_meta_listener( ActivityRepository $repo ): MetaLi
 		array(
 			'ignored_meta_keys'    => array(),
 			'ignored_option_names' => array(),
+			'ignored_post_types'   => array(),
 			'enabled_groups'       => array( 'meta' ),
 		)
 	);
@@ -87,6 +88,7 @@ it(
 		)
 		->andReturn( true );
 
+		WP_Mock::userFunction( 'get_post_type' )->with( 10 )->andReturn( 'post' );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -133,6 +135,7 @@ it(
 		$repo = Mockery::mock( ActivityRepository::class );
 		$repo->shouldReceive( 'insert' )->once()->andReturn( true );
 
+		WP_Mock::userFunction( 'get_post_type' )->with( 10 )->andReturn( 'post' );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -143,5 +146,69 @@ it(
 
 		// WordPress passes an array of meta IDs — this must not throw a TypeError.
 		$listener->on_deleted_post_meta( array( 42, 43 ), 10, 'my_custom_key', '' );
+	}
+);
+
+// ---------------------------------------------------------------------------
+// Ignored post types — post meta should NOT be logged either
+// ---------------------------------------------------------------------------
+
+it(
+	'skips logging added_post_meta for a post of an ignored post type',
+	function () {
+		$repo = Mockery::mock( ActivityRepository::class );
+		$repo->shouldNotReceive( 'insert' );
+
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn(
+			array(
+				'ignored_meta_keys'  => array(),
+				'ignored_post_types' => array( 'acf-field-group' ),
+			)
+		);
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
+		WP_Mock::userFunction( 'get_post_type' )->with( 10 )->andReturn( 'acf-field-group' );
+
+		$listener = new MetaListener( $repo );
+		$listener->on_added_post_meta( 1, 10, 'my_custom_key', 'hello' );
+	}
+);
+
+it(
+	'skips logging updated_post_meta for a post of an ignored post type',
+	function () {
+		$repo = Mockery::mock( ActivityRepository::class );
+		$repo->shouldNotReceive( 'insert' );
+
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn(
+			array(
+				'ignored_meta_keys'  => array(),
+				'ignored_post_types' => array( 'my_cpt_*' ),
+			)
+		);
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
+		WP_Mock::userFunction( 'get_post_type' )->with( 10 )->andReturn( 'my_cpt_something' );
+
+		$listener = new MetaListener( $repo );
+		$listener->on_updated_post_meta( 1, 10, 'my_custom_key', 'hello' );
+	}
+);
+
+it(
+	'skips logging deleted_post_meta for a post of an ignored post type',
+	function () {
+		$repo = Mockery::mock( ActivityRepository::class );
+		$repo->shouldNotReceive( 'insert' );
+
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn(
+			array(
+				'ignored_meta_keys'  => array(),
+				'ignored_post_types' => array( 'acf-field-group' ),
+			)
+		);
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
+		WP_Mock::userFunction( 'get_post_type' )->with( 10 )->andReturn( 'acf-field-group' );
+
+		$listener = new MetaListener( $repo );
+		$listener->on_deleted_post_meta( array( 42 ), 10, 'my_custom_key', '' );
 	}
 );

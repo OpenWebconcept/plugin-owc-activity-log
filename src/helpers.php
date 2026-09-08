@@ -72,6 +72,7 @@ function owc_activity_log_get_settings(): array
 		'log_ip'               => false,
 		'ignored_meta_keys'    => array(),
 		'ignored_option_names' => array(),
+		'ignored_post_types'   => array(),
 		'enabled_groups'       => owc_activity_log_all_groups(),
 	);
 

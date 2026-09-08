@@ -90,6 +90,9 @@ class AdminPageController
 		$raw_options     = isset( $_POST['ignored_option_names'] ) ? sanitize_textarea_field( wp_unslash( $_POST['ignored_option_names'] ) ) : '';
 		$ignored_options = array_filter( array_map( 'trim', explode( "\n", $raw_options ) ) );
 
+		$raw_post_types     = isset( $_POST['ignored_post_types'] ) ? sanitize_textarea_field( wp_unslash( $_POST['ignored_post_types'] ) ) : '';
+		$ignored_post_types = array_filter( array_map( 'trim', explode( "\n", $raw_post_types ) ) );
+
 		$posted_groups  = isset( $_POST['enabled_groups'] ) ? array_map( 'sanitize_key', (array) wp_unslash( $_POST['enabled_groups'] ) ) : array();
 		$enabled_groups = array_intersect( $posted_groups, $all_groups );
 
@@ -103,6 +106,7 @@ class AdminPageController
 				'log_ip'               => $log_ip,
 				'ignored_meta_keys'    => array_values( $ignored_meta ),
 				'ignored_option_names' => array_values( $ignored_options ),
+				'ignored_post_types'   => array_values( $ignored_post_types ),
 				'enabled_groups'       => array_values( $enabled_groups ),
 			)
 		);

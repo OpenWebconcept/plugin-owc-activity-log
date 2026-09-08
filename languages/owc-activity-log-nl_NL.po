@@ -350,31 +350,31 @@ msgid "Plugin \"%1$s\" %2$s via upgrader."
 msgstr "Plugin \"%1$s\" %2$s via de updater."
 
 #. translators: 1: post title, 2: post type, 3: verb
-#: src/Listeners/PostListener.php:53
+#: src/Listeners/PostListener.php:54
 #, php-format
 msgid "Post \"%1$s\" (%2$s) was %3$s."
 msgstr "Bericht \"%1$s\" (%2$s) is %3$s."
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:111
+#: src/Listeners/PostListener.php:113
 #, php-format
 msgid "Post \"%1$s\" (%2$s) fields changed."
 msgstr "Velden van bericht \"%1$s\" (%2$s) zijn gewijzigd."
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:137
+#: src/Listeners/PostListener.php:140
 #, php-format
 msgid "Post \"%1$s\" (%2$s) moved to trash."
 msgstr "Bericht \"%1$s\" (%2$s) verplaatst naar prullenbak."
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:162
+#: src/Listeners/PostListener.php:166
 #, php-format
 msgid "Post \"%1$s\" (%2$s) restored from trash."
 msgstr "Bericht \"%1$s\" (%2$s) teruggezet vanuit prullenbak."
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:186
+#: src/Listeners/PostListener.php:191
 #, php-format
 msgid "Post \"%1$s\" (%2$s) permanently deleted."
 msgstr "Bericht \"%1$s\" (%2$s) definitief verwijderd."
@@ -553,3 +553,11 @@ msgstr "Genegeerde optienamen"
 #: src/Views/admin/settings-page.php:118
 msgid "One option name per line. Wildcards supported: my_plugin_*"
 msgstr "Één optienaam per regel. Wildcards ondersteund: mijn_plugin_*"
+
+#: src/Views/admin/settings-page.php:124
+msgid "Ignored post types"
+msgstr "Genegeerde berichttypen"
+
+#: src/Views/admin/settings-page.php:133
+msgid "One post type per line. Posts of these types are not logged. Wildcards supported: my_cpt_*"
+msgstr "Eén berichttype per regel. Berichten van deze typen worden niet gelogd. Wildcards ondersteund: mijn_cpt_*"

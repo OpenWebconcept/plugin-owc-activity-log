@@ -63,6 +63,7 @@ class MetaListener extends AbstractListener
 	public function on_added_post_meta( int $_meta_id, int $post_id, string $meta_key, mixed $meta_value ): void
 	{
 		if ( $this->is_ignored_key( $meta_key ) ) return;
+		if ( $this->is_ignored_post( $post_id ) ) return;
 
 		$this->log(
 			'meta',
@@ -87,6 +88,7 @@ class MetaListener extends AbstractListener
 	public function on_updated_post_meta( int $_meta_id, int $post_id, string $meta_key, mixed $meta_value ): void
 	{
 		if ( $this->is_ignored_key( $meta_key ) ) return;
+		if ( $this->is_ignored_post( $post_id ) ) return;
 
 		$this->log(
 			'meta',
@@ -111,6 +113,7 @@ class MetaListener extends AbstractListener
 	public function on_deleted_post_meta( array $_meta_ids, int $post_id, string $meta_key, mixed $_meta_value ): void
 	{
 		if ( $this->is_ignored_key( $meta_key ) ) return;
+		if ( $this->is_ignored_post( $post_id ) ) return;
 
 		$this->log(
 			'meta',
@@ -282,5 +285,17 @@ class MetaListener extends AbstractListener
 		}
 
 		return false;
+	}
+
+	/**
+	 * Check whether a post's type is ignored, so its meta is not logged either.
+	 *
+	 * @since NEXT
+	 */
+	private function is_ignored_post( int $post_id ): bool
+	{
+		$post_type = get_post_type( $post_id );
+
+		return $post_type && $this->is_ignored_post_type( $post_type );
 	}
 }

@@ -45,6 +45,7 @@ class PostListener extends AbstractListener
 		if ( $this->is_auto_save() ) return;
 		if ( wp_is_post_revision( $post_id ) ) return;
 		if ( 'auto-draft' === $post->post_status ) return;
+		if ( $this->is_ignored_post_type( $post->post_type ) ) return;
 
 		$verb    = $update ? 'updated' : 'created';
 		$title   = $post->post_title ?: "#{$post_id}";
@@ -79,6 +80,7 @@ class PostListener extends AbstractListener
 	public function on_post_updated( int $post_id, WP_Post $post_after, WP_Post $post_before ): void
 	{
 		if ( wp_is_post_revision( $post_id ) ) return;
+		if ( $this->is_ignored_post_type( $post_after->post_type ) ) return;
 
 		$changed = array();
 
@@ -130,6 +132,7 @@ class PostListener extends AbstractListener
 		$post = get_post( $post_id );
 
 		if ( ! $post instanceof WP_Post ) return;
+		if ( $this->is_ignored_post_type( $post->post_type ) ) return;
 
 		$title   = $post->post_title ?: "#{$post_id}";
 		$message = sprintf(
@@ -155,6 +158,7 @@ class PostListener extends AbstractListener
 		$post = get_post( $post_id );
 
 		if ( ! $post instanceof WP_Post ) return;
+		if ( $this->is_ignored_post_type( $post->post_type ) ) return;
 
 		$title   = $post->post_title ?: "#{$post_id}";
 		$message = sprintf(
@@ -179,6 +183,7 @@ class PostListener extends AbstractListener
 	{
 		if ( wp_is_post_revision( $post_id ) ) return;
 		if ( 'auto-draft' === $post->post_status ) return;
+		if ( $this->is_ignored_post_type( $post->post_type ) ) return;
 
 		$title   = $post->post_title ?: "#{$post_id}";
 		$message = sprintf(

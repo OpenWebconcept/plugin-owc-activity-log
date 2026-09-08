@@ -118,6 +118,21 @@ $all_groups = owc_activity_log_all_groups();
 					<p class="description"><?php esc_html_e( 'One option name per line. Wildcards supported: my_plugin_*', 'owc-activity-log' ); ?></p>
 				</td>
 			</tr>
+
+			<tr>
+				<th scope="row">
+					<label for="ignored_post_types"><?php esc_html_e( 'Ignored post types', 'owc-activity-log' ); ?></label>
+				</th>
+				<td>
+					<textarea
+						id="ignored_post_types"
+						name="ignored_post_types"
+						rows="6"
+						class="large-text code"
+					><?php echo esc_textarea( implode( "\n", $settings['ignored_post_types'] ) ); ?></textarea>
+					<p class="description"><?php esc_html_e( 'One post type per line. Posts of these types are not logged. Wildcards supported: my_cpt_*', 'owc-activity-log' ); ?></p>
+				</td>
+			</tr>
 		</table>
 
 		<?php submit_button(); ?>

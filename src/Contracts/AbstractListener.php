@@ -123,4 +123,22 @@ abstract class AbstractListener
 
 		return $value;
 	}
+
+	/**
+	 * Check whether a post type should be ignored.
+	 *
+	 * @since NEXT
+	 */
+	protected function is_ignored_post_type( string $post_type ): bool
+	{
+		$settings      = owc_activity_log_get_settings();
+		$extra_ignored = (array) ( $settings['ignored_post_types'] ?? array() );
+		$all_ignored   = (array) apply_filters( 'owc_activity_log_ignored_post_types', $extra_ignored );
+
+		foreach ( $all_ignored as $pattern ) {
+			if ( fnmatch( $pattern, $post_type ) ) return true;
+		}
+
+		return false;
+	}
 }

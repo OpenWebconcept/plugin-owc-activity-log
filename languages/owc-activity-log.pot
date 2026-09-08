@@ -348,31 +348,31 @@ msgid "Plugin \"%1$s\" %2$s via upgrader."
 msgstr ""
 
 #. translators: 1: post title, 2: post type, 3: verb
-#: src/Listeners/PostListener.php:53
+#: src/Listeners/PostListener.php:54
 #, php-format
 msgid "Post \"%1$s\" (%2$s) was %3$s."
 msgstr ""
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:111
+#: src/Listeners/PostListener.php:113
 #, php-format
 msgid "Post \"%1$s\" (%2$s) fields changed."
 msgstr ""
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:137
+#: src/Listeners/PostListener.php:140
 #, php-format
 msgid "Post \"%1$s\" (%2$s) moved to trash."
 msgstr ""
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:162
+#: src/Listeners/PostListener.php:166
 #, php-format
 msgid "Post \"%1$s\" (%2$s) restored from trash."
 msgstr ""
 
 #. translators: 1: post title, 2: post type
-#: src/Listeners/PostListener.php:186
+#: src/Listeners/PostListener.php:191
 #, php-format
 msgid "Post \"%1$s\" (%2$s) permanently deleted."
 msgstr ""
@@ -548,4 +548,12 @@ msgstr ""
 
 #: src/Views/admin/settings-page.php:118
 msgid "One option name per line. Wildcards supported: my_plugin_*"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:124
+msgid "Ignored post types"
+msgstr ""
+
+#: src/Views/admin/settings-page.php:133
+msgid "One post type per line. Posts of these types are not logged. Wildcards supported: my_cpt_*"
 msgstr ""

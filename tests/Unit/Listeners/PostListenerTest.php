@@ -139,6 +139,8 @@ it(
 
 		WP_Mock::userFunction( 'wp_doing_autosave' )->andReturn( false );
 		WP_Mock::userFunction( 'wp_is_post_revision' )->andReturn( false );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array() ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -171,6 +173,8 @@ it(
 
 		WP_Mock::userFunction( 'wp_doing_autosave' )->andReturn( false );
 		WP_Mock::userFunction( 'wp_is_post_revision' )->andReturn( false );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array() ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -200,6 +204,8 @@ it(
 		->andReturn( true );
 
 		WP_Mock::userFunction( 'get_post' )->with( 5 )->andReturn( $post );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array() ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -230,6 +236,8 @@ it(
 		->andReturn( true );
 
 		WP_Mock::userFunction( 'wp_is_post_revision' )->andReturn( false );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array() ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
 		WP_Mock::userFunction( 'owc_activity_log_group_enabled' )->andReturn( true );
 		WP_Mock::userFunction( 'wp_get_current_user' )->andReturn( new WP_User() );
 		WP_Mock::userFunction( 'current_time' )->andReturn( '2024-01-01 00:00:00' );
@@ -238,5 +246,51 @@ it(
 
 		$listener = new PostListener( $repo );
 		$listener->on_delete_post( 7, $post );
+	}
+);
+
+// ---------------------------------------------------------------------------
+// Ignored post types
+// ---------------------------------------------------------------------------
+
+it(
+	'does not log for a post type listed in ignored_post_types',
+	function () {
+		$repo = Mockery::mock( ActivityRepository::class );
+		$repo->shouldNotReceive( 'insert' );
+
+		$post              = Mockery::mock( WP_Post::class );
+		$post->post_status = 'publish';
+		$post->post_title  = 'Hello World';
+		$post->post_type   = 'acf-field-group';
+
+		WP_Mock::userFunction( 'wp_doing_autosave' )->andReturn( false );
+		WP_Mock::userFunction( 'wp_is_post_revision' )->andReturn( false );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array( 'acf-field-group' ) ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
+
+		$listener = new PostListener( $repo );
+		$listener->on_save_post( 20, $post, false );
+	}
+);
+
+it(
+	'does not log for a post type matching an ignored_post_types wildcard',
+	function () {
+		$repo = Mockery::mock( ActivityRepository::class );
+		$repo->shouldNotReceive( 'insert' );
+
+		$post              = Mockery::mock( WP_Post::class );
+		$post->post_status = 'publish';
+		$post->post_title  = 'Hello World';
+		$post->post_type   = 'my_cpt_something';
+
+		WP_Mock::userFunction( 'wp_doing_autosave' )->andReturn( false );
+		WP_Mock::userFunction( 'wp_is_post_revision' )->andReturn( false );
+		WP_Mock::userFunction( 'owc_activity_log_get_settings' )->andReturn( array( 'ignored_post_types' => array( 'my_cpt_*' ) ) );
+		WP_Mock::userFunction( 'apply_filters' )->andReturnArg( 1 );
+
+		$listener = new PostListener( $repo );
+		$listener->on_save_post( 21, $post, false );
 	}
 );
